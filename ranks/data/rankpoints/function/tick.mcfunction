@@ -1,7 +1,7 @@
 # PLAYTIME
 execute as @a run scoreboard players add @s tickCounter 1
-execute as @a[scores={tickCounter=1200..}] run scoreboard players set @s tickCounter 0
-execute as @a[scores={tickCounter=0}] run scoreboard players add @s rankPoints 1
+execute as @a[scores={tickCounter=1200..}] run scoreboard players add @s rankPoints 1
+execute as @a[scores={tickCounter=1200..}] run scoreboard players reset @s tickCounter
 
 
 # KILL
@@ -69,8 +69,6 @@ execute as @a[scores={oreMiningAncientDebris=1..}] run scoreboard players set @s
 
 
 # TEAM
-execute as @a run team leave @s
-
 execute as @a[scores={rankPoints=..-10000}] run team join Grausam @s
 execute as @a[scores={rankPoints=-9999..-6000}] run team join Boesartig @s
 execute as @a[scores={rankPoints=-5999..-3000}] run team join Arglistig @s
@@ -80,3 +78,17 @@ execute as @a[scores={rankPoints=1000..2999}] run team join Freundlich @s
 execute as @a[scores={rankPoints=3000..5999}] run team join Gut @s
 execute as @a[scores={rankPoints=6000..9999}] run team join Edel @s
 execute as @a[scores={rankPoints=10000..}] run team join Ritterlich @s
+
+
+# EFFECTS
+execute as @a[scores={rankPoints=..-10000}] run effect give @s minecraft:darkness 2 0 true
+execute as @a[scores={rankPoints=..-6000}] run effect give @s minecraft:weakness 2 0 true
+execute as @a[scores={rankPoints=..-3000}] run effect give @s minecraft:slowness 2 2 true
+execute as @a[scores={rankPoints=..-1000}] run effect give @s minecraft:mining_fatigue 2 1 true
+execute as @a[scores={rankPoints=1000..}] run effect give @s minecraft:haste 2 0 true
+execute as @a[scores={rankPoints=3000..}] run effect give @s minecraft:water_breathing 2 0 true
+execute as @a[scores={rankPoints=3000..}] run effect give @s minecraft:night_vision 2 0 true
+execute as @a[scores={rankPoints=6000..}] run effect give @s minecraft:saturation 2 0 true
+execute as @a[scores={rankPoints=6000..}] run effect give @s minecraft:fire_resistance 2 2 true
+execute as @a[scores={rankPoints=10000..}] run effect give @s minecraft:strength 2 0 true
+execute as @a[scores={rankPoints=10000..}] run effect give @s minecraft:regeneration 2 2 true

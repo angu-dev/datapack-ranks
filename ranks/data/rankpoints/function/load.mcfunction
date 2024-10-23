@@ -1,7 +1,6 @@
 # VARIABLES
 scoreboard objectives add tickCounter dummy
 scoreboard objectives add rankPoints dummy
-scoreboard objectives add rankTag dummy
 scoreboard objectives add playerKills playerKillCount
 
 
@@ -59,5 +58,5 @@ team modify Aggressiv prefix "§e§lAggressiv "
 team modify Neutral prefix "§7§lNeutral "
 team modify Freundlich prefix "§a§lFreundlich "
 team modify Gut prefix "§2§lGut "
-team modify Edel prefix "§b§lEdel "
-team modify Ritterlich prefix "§9§lRitterlich "
+team modify Edel prefix "§9§lEdel "
+team modify Ritterlich prefix "§b§lRitterlich "
